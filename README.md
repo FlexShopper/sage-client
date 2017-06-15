@@ -1,10 +1,10 @@
-'use strict';
+# Sage Gateway Client
 
-const SageClient = require('./index');
-
+## usage
+```
 const client = new SageClient({
-    username: 'FlexShopperCert',
-    password: 'suDPJHnv&REtyVvX',
+    username: 'Username',
+    password: 'Password',
     terminalId: '2310',
     identifier: 'A'
 });
@@ -29,6 +29,5 @@ const purchaseParams = {
     accountType: 'Checking'
 };
 
-client.purchaseWithACH(purchaseParams).then(result => {
-    console.log(result);
-});
+client.purchaseWithACH(purchaseParams);
+```
