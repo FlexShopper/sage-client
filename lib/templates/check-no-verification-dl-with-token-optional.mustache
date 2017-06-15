@@ -1,0 +1,14 @@
+<x:Envelope xmlns:x="http://schemas.xmlsoap.org/soap/envelope/" xmlns:aut="http://tempuri.org/GETI.eMagnus.WebServices/AuthGateway">
+    <x:Header>
+        <aut:AuthGatewayHeader>
+            <aut:UserName>{{username}}</aut:UserName>
+            <aut:Password>{{password}}</aut:Password>
+            <aut:TerminalID>{{terminalId}}</aut:TerminalID>
+        </aut:AuthGatewayHeader>
+    </x:Header>
+    <x:Body>
+        <aut:ProcessSingleCertificationCheck>
+            <aut:DataPacket>{{dataPacket}}</aut:DataPacket>
+        </aut:ProcessSingleCertificationCheck>
+    </x:Body>
+</x:Envelope>

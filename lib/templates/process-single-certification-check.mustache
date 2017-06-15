@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTH_GATEWAY>
+    <TRANSACTION>
+        <TRANSACTION_ID>{{transactionId}}</TRANSACTION_ID>
+        <MERCHANT>
+            <TERMINAL_ID>{{terminalId}}</TERMINAL_ID>
+        </MERCHANT>
+        <PACKET>
+            <IDENTIFIER>{{identifier}}</IDENTIFIER>
+            <ACCOUNT>
+                <ROUTING_NUMBER>{{routingNumber}}</ROUTING_NUMBER>
+                <ACCOUNT_NUMBER>{{accountNumber}}</ACCOUNT_NUMBER>
+                <ACCOUNT_TYPE>{{accountType}}</ACCOUNT_TYPE>
+            </ACCOUNT>
+            <CONSUMER>
+                <FIRST_NAME>{{customer.firstName}}</FIRST_NAME>
+                <LAST_NAME>{{customer.lastName}}</LAST_NAME>
+                <ADDRESS1>{{customer.addressOne}}</ADDRESS1>
+                <ADDRESS2>{{customer.addressTwo}}</ADDRESS2>
+                <CITY>{{customer.city}}</CITY>
+                <STATE>{{customer.state}}</STATE>
+                <ZIP>{{customer.zip}}</ZIP>
+                <PHONE_NUMBER>{{customer.phone}}</PHONE_NUMBER>
+                <DL_STATE></DL_STATE>
+                <DL_NUMBER></DL_NUMBER>
+                <COURTESY_CARD_ID></COURTESY_CARD_ID>
+            </CONSUMER>
+            <CHECK>
+                <CHECK_AMOUNT>{{amount}}</CHECK_AMOUNT>
+            </CHECK>
+        </PACKET>
+    </TRANSACTION>
+</AUTH_GATEWAY>
