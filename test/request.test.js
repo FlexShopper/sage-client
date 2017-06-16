@@ -18,8 +18,6 @@ describe('SageRequest', () => {
         });
     });
 
-
-
     describe('Making a SingleCertificationCheck requests', () => {
         let request;
         let reqParams;
@@ -30,7 +28,9 @@ describe('SageRequest', () => {
                 username: 'username',
                 password: 'password',
                 uri: 'http://demo.eftchecks.com/webservices/authgateway.asmx',
-                request: { post: () => {} },
+                request: { post: () => {
+                    return Promise.resolve('<xml>response</xml>')
+                } },
                 renderer: require('mustache')
             };
 
@@ -67,6 +67,8 @@ describe('SageRequest', () => {
 
                 expect(options.headers['SOAPAction']).to.equal(expected);
                 done();
+
+                return Promise.resolve('<xml>response</xml>');
             };
 
             request.processSingleCertificationCheck(reqParams);
@@ -78,6 +80,7 @@ describe('SageRequest', () => {
                 expect(options.body).to.include(expected);
 
                 done();
+                return Promise.resolve('<xml>response</xml>');
             };
 
             request.processSingleCertificationCheck(reqParams);
