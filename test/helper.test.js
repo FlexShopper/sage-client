@@ -24,4 +24,15 @@ describe('Sage client helper', () => {
         done();
     });
 
+    it('should returns Passed value from an object with path VALIDATION_MESSAGE/RESULT', done => {
+        const response = {
+            VALIDATION_MESSAGE: [{
+                RESULT: ['Passed']
+            }],
+        };
+
+        expect(helper.pathFrom(response, 'VALIDATION_MESSAGE/RESULT')).to.equal('Passed');
+        done();
+    });
+
 });
