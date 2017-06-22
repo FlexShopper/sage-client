@@ -1,6 +1,6 @@
 {
   "name": "@flexshopper/sage-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Sage Gateway Library",
   "main": "payment-test.js",
   "scripts": {
